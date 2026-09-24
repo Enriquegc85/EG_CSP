@@ -1,0 +1,1 @@
+#EG, loop notes
