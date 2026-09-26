@@ -1,5 +1,4 @@
-#EG, number guessing game
-
+# EG, number guessing game
 import random
 
 max_attempts = 6
@@ -9,13 +8,20 @@ high = 100
 number = random.randint(low, high)
 print(f"Guess a number between {low} and {high}. You have {max_attempts} attempts.")
 
-for max_attempts in range (1, max_attempts  + 1):
-    guess = int(input(f"guess #{max_attempts}: "))
+guesses_taken = 0
+
+while guesses_taken < max_attempts:
+    guesses_taken = guesses_taken + 1
+    
+    guess = int(input(f"guess #{guesses_taken}: "))
+    
     if guess == number:
-        print(f"You Guessed it in {max_attempts}")
+        print(f"You Guessed it in {guesses_taken} attempts!")
+        break
     elif guess > number:
         print("Too high")
-    if guess < number:
+    elif guess < number:
         print("Too low")
-else:
+
+if guess != number:
     print(f"You're out of guesses! The number was {number}.")
