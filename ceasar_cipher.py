@@ -3,7 +3,7 @@ choices = ""
 while choices not in ['E', 'D']:
     choices = input("Would you like to (E)ncrypt or (D)ecrypt a message? ").strip().upper()
     if choices not in ['E', 'D']:
-        print("Invalid choice. Please enter 'E' to encrypt or 'D' to decrypt.")
+        print("Invalid! stop joking around. Please enter 'E' to encrypt or 'D' to decrypt.+")
 message = input("Enter your message: ")
 shift = int(input("Enter a shift amount: "))
 
