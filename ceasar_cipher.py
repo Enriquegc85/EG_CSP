@@ -14,12 +14,12 @@ def caesar_shift(message, shift):
 
 choices = ""
 while choices not in ['E', 'D']:
-    choices = input("Would you like to (E)ncrypt or (D)ecrypt a message? ").strip().upper()
+    choices = input("Would you like to (E)ncrypt or (D)ecrypt a message? Hurry up and pick one >:(  ").strip().upper()
     if choices not in ['E', 'D']:
-        print("Invalid! stop joking around. Please enter 'E' to encrypt or 'D' to decrypt.")
+        print("Invalid! stop joking around before Ms.Larose slimes you out buddy. Please enter 'E' to encrypt or 'D' to decrypt.")
 
-message = input("Enter your message: ")
-shift = int(input("Enter a shift amount: "))
+message = input("Enter your message porfavor -_-: ")
+shift = int(input("Enter a shift amount please: "))
 
 if choices == 'E':
     output = caesar_shift(message, shift)
