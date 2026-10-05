@@ -1,6 +1,6 @@
 #EG, hangman game yayayaya
 import random
-with open("hangman.txt", "r") as file:
-    word = file.read().splitlines()
-secret_word = random.choice(word).lower()
-
+with open("words.txt", "r") as file:
+    words = file.read().splitlines()
+    words = random.choice(words)
+content = file.read(",").split
