@@ -1,16 +1,25 @@
-age = int(input("Enter your age: "))
-matinee = input("Is this a matinee? (yes/no): ").lower()
+#EG, fixed code :)
+age_input = input("Enter your age: ")
 
-if age < 5:
-    price = 0
-elif age < 12:
-    price = 8
-elif age < 65:
-    price = 12
+if not age_input.isnumeric():
+    print("Invalid age: Please enter a whole number using digits only.")
 else:
-    price = 9
+    age = int(age_input)
+    matinee = input("Is this a matinee? (yes/no): ").lower()
 
-if matinee == "yes":
-    price = price - 3
+    if age <= 4:
+        price = 0
+    elif age <= 12:
+        price = 8
+    elif age <= 64:
+        price = 12
+    else:
+        price = 9
 
-print(f"Ticket price: ${price}")
+    if matinee == "yes":
+        price = price - 3
+
+    if price < 0:
+        price = 0
+
+    print(f"Ticket price: ${price}.00")
